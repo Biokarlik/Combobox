@@ -1,19 +1,15 @@
-from tkinter import *
-from tkinter import ttk
-
-root = Tk()
-root.title("Combobox example")
-root.geometry("250x200")
-
-
-def selected(event):
-    selection = combobox.get()
-    print(selection)
+class Sobaka:
+    count_sobak = 0
+    def __init__(self):
+        #count_sobak += 1
+        self.klichka = ""
+        self.poroda = ""
+        self.kol_vo_nog = 0
+    def printInfo(self):
+        print(self.klichka)
 
 
-board_games = ["Chess", "Checkers", "Fool", "Carcassonne"]
-combobox = ttk.Combobox(values=board_games, state="readonly")
-combobox.pack()
-combobox.bind("<<ComboboxSelected>>", selected)
-print("Programm started")
-root.mainloop()
+listik = list()
+for i in range(50):
+    bobik = Sobaka()
+    listik.append(bobik)
